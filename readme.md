@@ -9,22 +9,39 @@ It is designed to handle **real-world HTML**, including malformed tables, rowspa
 ## High-Level Architecture
 
 
+
 Client
+
 ↓
+
 HTTP API (FetchTableHandler)
+
 ↓
+
 Fetcher (HTTP + gzip aware)
+
 ↓
+
 Parser (table normalization via handlers)
+
 ↓
+
 Kafka Producer
+
 ↓
+
 Kafka
+
 ↓
+
 Kafka Consumer
+
 ↓
+
 DB Ingestion (dynamic schema + batch inserts)
+
 ↓
+
 MySQL
 
 
@@ -53,18 +70,32 @@ Each layer has **one responsibility** and is intentionally decoupled from the ot
 
 
 Table_collecter/
+
 ├── api/ # HTTP handlers
+
 ├── fetcher/ # HTML fetching logic
+
 ├── parser/ # Table normalization + handlers
+
 ├── producer/ # Kafka producer
+
 ├── consumer/ # Kafka consumer
+
+
 ├── db/ # MySQL schema & insertion logic
+
 ├── monitor/ # System monitoring scripts
+
 ├── kafka_docker/ # Kafka docker setup
+
 ├── mysql_docker/ # MySQL docker setup
+
 ├── config/ # Runtime configs (ignored in git)
+
 ├── go.mod
+
 ├── go.sum
+
 └── README.md
 
 
