@@ -1,0 +1,1 @@
+python monitor_all.py

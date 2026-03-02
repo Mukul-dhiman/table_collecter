@@ -1,0 +1,22 @@
+# Go
+/bin/
+/pkg/
+*.exe
+*.exe~
+*.test
+*.out
+
+# Env & config
+.env
+config/*.yaml
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
