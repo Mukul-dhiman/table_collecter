@@ -100,3 +100,17 @@ Table_collecter/
 
 
 ---
+
+
+
+## Limitation
+
+- No JS-rendered tables: Fails on SPAs, AJAX, or client-side content (basic HTTP only).
+
+- No PDF support: Cannot extract from PDFs or embedded viewers (HTML DOM required).
+
+- Limited colspan/rowspan: Complex merges cause misalignment or truncation.
+
+- No auth-protected pages: Blocks login, OAuth, or session-based content.
+
+- Append-only schemas: No versioning; ignores column changes or drops.
