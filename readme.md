@@ -51,7 +51,7 @@ Each layer has **one responsibility** and is intentionally decoupled from the ot
 
 ## Key Features
 
-- HTTP fetcher with proper headers (User-Agent, gzip support)
+- HTTP fetcher with proper headers
 - Table normalization independent of storage
 - Multiple table handlers:
   - Simple tables
